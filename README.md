@@ -9,6 +9,7 @@ vagrant up
 vagrant ssh kubemaster
 
 # To test the cluster
+kubectl get nodes
 kubectl create deployment hello-kubeadm --image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080
 kubectl get deployments
 kubectl get pods
@@ -16,3 +17,5 @@ kubectl expose deployment hello-kubeadm --type=LoadBalancer --port=8080
 kubectl get services
 kubectl describe pod <pod-name>
 # Search with node ip:nodeport to check the connection
+
+# Logout from vm and "vagrant destroy"
