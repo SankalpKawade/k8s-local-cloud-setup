@@ -1,4 +1,5 @@
 # k8s-local-setup
+# Install vagrant : https://developer.hashicorp.com/vagrant/downloads
 
 # Production setup on local using kubeadm
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
