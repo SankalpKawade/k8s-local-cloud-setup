@@ -2,7 +2,7 @@ Vagrant.configure("2") do |config|
   config.hostmanager.enabled = true 
   config.hostmanager.manage_host = true
   config.vm.define "kubemaster" do |kubemaster|
-    kubemaster.vm.box = "ubuntu/jammy64"
+    kubemaster.vm.box = "ubuntu/bionic64"
 	kubemaster.vm.network "private_network", ip: "192.168.33.2"
 	kubemaster.vm.provider "virtualbox" do |vb|
             vb.name = "kubemaster"
@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "kubenode1" do |kubenode1|
-    kubenode1.vm.box = "ubuntu/jammy64"
+    kubenode1.vm.box = "ubuntu/bionic64"
 	kubenode1.vm.network "private_network", ip: "192.168.33.3"
         kubenode1.vm.provider "virtualbox" do |vb|
             vb.name = "kubenode1"
@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "kubenode2" do |kubenode2|
-    kubenode2.vm.box = "ubuntu/jammy64"
+    kubenode2.vm.box = "ubuntu/bionic64"
         kubenode2.vm.network "private_network", ip: "192.168.33.4"
         kubenode2.vm.provider "virtualbox" do |vb|
             vb.name = "kubenode2"
